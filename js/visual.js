@@ -21,7 +21,9 @@ $(document).ready(function() {
       borderRadius: 10,
     })
     .animate({width: 20, height: 20})
-    .fadeOut();   
+    .fadeOut(400, function () {
+      $(this).remove();
+    });   
 
   });
 });
