@@ -17,9 +17,9 @@ document.onmousemove = updateTone;
 function updateTone(e) {
   posX = e.pageX;
   posY = e.pageY;
-  
+
   oscillator.frequency.value = posX
-  gainNode.gain.value = posY  
+  gainNode.gain.value = posY
 }
 
 var vibratoRate = 50;
@@ -36,12 +36,12 @@ function vibrato() {
 document.onkeydown = handleKey;
 
 function handleKey(e) {
-  switch(e.keyIdentifier){
-    case "Down":
+  switch(e.key){
+    case "ArrowDown":
       if (detuneVal > 0) detuneVal--;
       console.log(detuneVal);
       break;
-    case "Up":
+    case "ArrowUp":
       detuneVal++;
       console.log(detuneVal);
       break;
